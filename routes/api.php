@@ -22,6 +22,7 @@ use App\Http\Controllers\UserController;
 Route::get('/products', [ProductController::class, 'index']);
 Route::post('/products', [ProductController::class, 'store']);
 Route::delete('/products/{id}', [ProductController::class, 'destroy']);
+Route::get('/products/season/{season}', [ProductController::class, 'getBySeason']);
 
 // Rutas para marcas (brands)
 Route::get('/brands', [BrandController::class, 'index']);

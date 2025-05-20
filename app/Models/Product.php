@@ -19,6 +19,11 @@ class Product extends Model
         'brand',
         'description',
         'size',
-        'available'
+        'available',
+        'recommended_seasons' 
+    ];
+
+    protected $casts = [
+        'recommended_seasons' => 'array', 
     ];
 }

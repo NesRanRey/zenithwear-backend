@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class BrandController extends Controller
 {
-    // Mostrar todas las marcas
+
     public function index()
     {
         $brands = Brand::all();
@@ -15,7 +15,7 @@ class BrandController extends Controller
     }
     
 
-    // Crear una nueva marca
+
     public function store(Request $request)
     {
         $validatedData = $request->validate([
@@ -29,7 +29,7 @@ class BrandController extends Controller
         return response()->json($brand, 201);
     }
 
-    // Mostrar una marca por su ID
+   
     public function show(string $id)
     {
         $brand = Brand::find($id);
@@ -41,7 +41,7 @@ class BrandController extends Controller
         return response()->json($brand);
     }
 
-    // Actualizar una marca por su ID
+   
     public function update(Request $request, string $id)
     {
         $brand = Brand::find($id);
@@ -61,7 +61,7 @@ class BrandController extends Controller
         return response()->json($brand);
     }
 
-    // Eliminar una marca por su ID
+    
     public function destroy(string $id)
     {
         $brand = Brand::find($id);
